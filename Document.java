@@ -8,7 +8,20 @@
  * @author Sdrah
  */
 public class Document {
-      public static <T> boolean existInList(List<T> L ,String word){
+    int ID;
+    LinkedList<String> wordsList=new LinkedList<String>();
+    
+    public Document(int id,LinkedList<String> words){
+       ID=id;
+       wordsList=words;
+        
+    }
+    
+    
+    
+    
+    
+    /*public static <T> boolean existInList(List<T> L ,String word){
     if(L.empty())
         return false;
     L.findFirst();
@@ -22,6 +35,7 @@ public class Document {
     
      return false; 
     
-    }
+    }*/
     
 }
+
