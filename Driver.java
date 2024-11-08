@@ -52,7 +52,7 @@ public class Driver {
                String i = line.substring(0,line.indexOf(','));
                int id = Integer.parseInt(i.trim());
                String docContent = line.substring(line.indexOf(',')+1).trim();
-               LinkedList<String> wordsInDoc = (docContent , id);
+               LinkedList<String> wordsInDoc = makeWordsList(docContent , id);
                ind.insertDoc(new Document(id,wordsInDoc));
            }
        }catch(Exception e){
