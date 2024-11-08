@@ -49,11 +49,7 @@ invertedIndex = new LinkedList<Word>();
     }
     }
       public void viewWords(){
-        if(invertedIndex.empty()){
-            System.out.println("There are no words");
-            return;
-        }
-        if(invertedIndex==null){
+       if(invertedIndex==null || invertedIndex.empty()){
             System.out.println("There are no words");
             return;
         }
