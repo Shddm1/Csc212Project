@@ -8,7 +8,13 @@ package cs212;
  *
  * @author Layan Almasoud
  */
-public class invertedIndex {
+public class InvertedIndex {
+
+   LinkedList<Word> invertedIndex;
+
+   public InvertedIndex(){
+invertedIndex = new LinkedList<Word>();
+   }
    
      public void add(String text , int id ) {
         Word w = new Word (text) ;
