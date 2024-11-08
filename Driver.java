@@ -77,11 +77,11 @@ public class Driver {
             return false;
         }
     }
-    public void makeIndexAndInvertedIndex( LinkedList<String> wordsList , String content, int id){
+      public void makeIndexAndInvertedIndex( LinkedList<String> wordsList , String content, int id){
        content=content.toLowerCase().replaceAll("[^a-zA-z0-9]", "");
        String [] words = content.split("\\s+");
        for(String word:words){
-           if(!word.exsitInStopwords(word))
+           if(!existsInStopWords(word))
            {
               wordsList.insert(word);
               invertedInd.add(word,id);
