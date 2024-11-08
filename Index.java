@@ -18,14 +18,12 @@ public class Index {
         documentList.insert(d);
     }
     public void viewDocuments(){
-        if(documentList.empty()){
+       
+        if(documentList==null || documentList.empty()){
             System.out.println("There are no documents");
             return;
         }
-        if(documentList==null){
-            System.out.println("There are no documents");
-            return;
-        }
+       
         System.out.println("All documents information");
         documentList.findFirst ();
         while(!documentList.last()){
