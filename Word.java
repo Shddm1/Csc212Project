@@ -10,11 +10,11 @@ package csc212;
  */
 public class Word {
     String text; 
-    Linkedlist<Integer>IDs; 
+    LinkedList<Integer>IDs; 
     
     public Word(String w) { 
         text = w ; 
-        IDs = new Linkedlist<Integer>() ; 
+        IDs = new LinkedList<Integer>() ; 
         
     } 
     public void AddID(int id) 
