@@ -33,7 +33,7 @@ invertedIndex = new LinkedList<Word>();
         
     }
      public void add(String text , int id ) {
-        Word w = new Word (text) ;
+        
         if(!exist(text)){
                      Word w = new Word(text) ;
                      w.IDs.insert(id);
