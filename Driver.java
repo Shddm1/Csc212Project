@@ -102,7 +102,7 @@ public class Driver {
     }
 public static void main(String[]args){
         Driver d = new Driver();
-        d.loadAllFiles("stop.txt", "dataset2.csv");
+        d.loadAllFiles("stop.txt", "dataset.csv");
         d.ind.viewDocuments();
         System.out.println("=====================");
         d.invertedInd.viewWords();
