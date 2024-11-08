@@ -83,7 +83,7 @@ public class Driver {
     }
     
       public void makeIndexAndInvertedIndex( LinkedList<String> wordsList , String content, int id){
-       content=content.toLowerCase().replaceAll("[^a-zA-z0-9]", "");
+       content=content.toLowerCase().replaceAll("[^a-zA-z0-9\\s]", "");
        String [] words = content.split("\\s+");
        for(String word:words){
            if(!existsInStopWords(word))
