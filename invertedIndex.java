@@ -67,7 +67,7 @@ invertedIndex = new LinkedList<Word>();
          Word word= invertedIndex.retrieve();
           System.out.println("\n---------------------------------");
           System.out.println("Word:"+word.text); 
-          System.out.println("[");
+          System.out.print("[");
           word.IDs.display();
           System.out.println("]");
           invertedIndex.findNext();   
