@@ -59,5 +59,19 @@ public class Driver {
            System.out.println("end of file");
        }
     }
+
+    public boolean existsInStopWords(String word){
+        if(stopWords == null || stopWords.empty())
+            return false;
+        stopWords.findFirst();
+        while(!stopWords.last()){
+            if(stopWords.retrieve().equals(word)){
+                return true;
+            }
+            return false;
+        }
+    }
+
+    
     }
 
