@@ -100,7 +100,13 @@ public class Driver {
         makeIndexAndInvertedIndex(wordList,content,id);
         return wordList;
     }
-
+public static void main(String[]args){
+        Driver d = new Driver();
+        d.loadAllFiles("stop.txt", "dataset2.csv");
+        d.ind.viewDocuments();
+        System.out.println("=====================");
+        d.invertedInd.viewWords();
+    }
     
     }
 
