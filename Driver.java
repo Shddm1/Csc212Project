@@ -60,6 +60,12 @@ public class Driver {
        }
     }
 
+    public void loadAllFiles(String stopWordFile,String docFile){
+        loadStopWords(stopWordFile);
+        loadAllDoc(docFile);
+        
+    }
+
     public boolean existsInStopWords(String word){
         if(stopWords == null || stopWords.empty())
             return false;
@@ -70,6 +76,24 @@ public class Driver {
             }
             return false;
         }
+    }
+    public void makeIndexAndInvertedIndex( LinkedList<String> wordsList , String content, int id){
+       content=content.toLowerCase().replaceAll("[^a-zA-z0-9]", "");
+       String [] words = content.split("\\s+");
+       for(String word:words){
+           if(!word.exsitInStopwords(word))
+           {
+              wordsList.insert(word);
+              invertedInd.add(word,id);
+           }
+           
+       }
+   }
+    
+    public LinkedList<String> makeWordsList(String content, int id){
+        LinkedList<String> wordList= new LinkedList<String>();
+        makeIndexAndInvertedIndex(wordList,content,id);
+        return wordList;
     }
 
     
