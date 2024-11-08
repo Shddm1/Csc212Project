@@ -66,7 +66,7 @@ public class Driver {
         
     }
 
-    public boolean existsInStopWords(String word){
+     public boolean existsInStopWords(String word){
         if(stopWords == null || stopWords.empty())
             return false;
         stopWords.findFirst();
@@ -74,9 +74,14 @@ public class Driver {
             if(stopWords.retrieve().equals(word)){
                 return true;
             }
-            return false;
+            stopWords.findNext();
         }
+        if(stopWords.retrieve().equals(word)){
+                return true;
+            }
+        return false;
     }
+    
       public void makeIndexAndInvertedIndex( LinkedList<String> wordsList , String content, int id){
        content=content.toLowerCase().replaceAll("[^a-zA-z0-9]", "");
        String [] words = content.split("\\s+");
