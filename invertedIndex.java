@@ -16,6 +16,22 @@ public class InvertedIndex {
 invertedIndex = new LinkedList<Word>();
    }
    
+   public boolean exist(String t){
+        if(invertedIndex==null || invertedIndex.empty())
+            return false;
+        invertedIndex.findFirst();
+        while(!invertedIndex.last())
+        {
+            if(invertedIndex.retrieve().text.equals(t))
+                return true;
+            invertedIndex.findNext();
+        }
+        if(invertedIndex.retrieve().text.equals(t))
+                return true;
+        
+        return false;
+        
+    }
      public void add(String text , int id ) {
         Word w = new Word (text) ;
         if(!exist(text)){
