@@ -35,16 +35,18 @@ invertedIndex = new LinkedList<Word>();
      public void add(String text , int id ) {
         
         if(!exist(text)){
-                     Word w = new Word(text) ;
-                     w.IDs.insert(id);
-                     invertedIndex.insert(w)
+             Word w = new Word(text);
+              w.IDs.insert(id);
+              invertedIndex.insert(w);
                              }
         else {
-            Word existword = invertedIndex.retrieve():
+            Word existword;
+            existword = invertedIndex.retrieve();
             existword.AddID(id);
             
 
         }
+    }
     }
       public void viewWords(){
         if(invertedIndex.empty()){
