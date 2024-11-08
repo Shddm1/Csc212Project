@@ -58,7 +58,7 @@ invertedIndex = new LinkedList<Word>();
         System.out.println("All words information");
         invertedIndex.findFirst ();
         while(!invertedIndex.last()){
-          Word word= Word.retrieve ();
+          Word word= Word.retrieve();
           System.out.println("\n---------------------------------");
           System.out.println("Word:"+word.text); 
           System.out.println("[");
@@ -66,7 +66,7 @@ invertedIndex = new LinkedList<Word>();
           System.out.println("]");
           invertedIndex.findNext();
         }
-         Word word= Word.retrieve ();
+         Word word= Word.retrieve();
           System.out.println("\n---------------------------------");
           System.out.println("Word:"+word.text); 
           System.out.println("[");
